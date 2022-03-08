@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Nunito:wght@600;700;800&display=swap');
+
+/* Reset CSS padrão */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+/* Classe reutilizaveis (wrapper/embrulho + flex) */
+.wrapper{
+    width: 90%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Começo estilo da seção inicial */
+/* o display block foi para tirar o botao de cima do <p> */
+/* o widht: fit-content foi feito para deixar o botao na largura do texto escrito, ou seja, independente do tamanho do texto dentro dele, o botão ficará na mesma largura do texto. Deixando o botão esticado. */
+.btn{
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 20px;
+    color: #ea0f78;
+    background-color: #fff;
+    padding: 10px 22px;
+    border-radius: 5px;
+    display: block;
+    width: fit-content;
+}
+/* Opacity é opacidade da cor */
+.btn:hover{
+    opacity: 0.8;
+}
+/* background: linear-gradient é o degrade. O 90deg é os graus */
+#secao-inicial{
+    padding: 32px 0;
+    color: #fff;
+    background: linear-gradient(90deg, #D83482 0%, #EC0A76 100%);
+}
+#logo{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+}
+#links-secoes{
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 16px;
+}
+#links-secoes > a{
+    padding: 10px 15px;
+}
+/* Hover é p/ ter uma interação na hora de passar o mouse me cima do botão*/
+#links-secoes > a:hover{
+    text-decoration: underline;
+}
+.btn_menu{
+    font-size: 16px;
+}
+/* Começo estilo banner */
+/* margin top é para distanciar a seção banner do menu */
+#conteudo-inicial{
+    margin-top: 64px;
+}
+#conteudo-esq{
+    width: 40%;
+}
+/* line-height é a altura da linha. Serve para diminuir a distância entre dois textos quebrados com ou não usando o <br> */
+#conteudo-esq > h1{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 56px;
+    line-height: 58px;
+}
+#conteudo-esq > p{
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 16px;
+    margin: 10px 0 32px;
+}
+/* depois arrumar imagem */
+#imagem-1{
+    max-width: 569px;
+    width: 45%;
+    min-width: 450px;
+}
+/* Começo estilo seção artigos (Título + Artigos Principais + Artigos em destaque)*/
+#secao-artigos{
+    background-color: #F3F5F7;
+    padding: 64px 0;
+}
+#secao-artigos > h2{
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+    color: #313131;
+    margin-bottom: 32px;
+}
+/* artigos principais */
+#artigos-principais{
+    width: 65%;
+}
+#artigos-principais > h3, #artigos-destaque > h3{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    color: #313131;
+}
+/* line-height é altura da linha */
+#artigos-principais > p{
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 18px;
+    color: #b6b6b6;
+    line-height: 26px;
+    margin: 10px 0 32px;
+}
+#cards{
+    /* a fazer: mexer quando colocar o restante dos cards/ quando tiver mais que um */
+    flex-wrap: wrap;
+}
+.card{
+    background-color: #fff;
+    width: 48%;
+    min-width: 310px;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 32px;
+}
+/* min-width é a largura minima que o card pode ficar sem precisar quebrar e fica um embaixo do outro */
+/* colocou 48% de largura, para forçar o card a ficar com duas coluna, ou seja, como estavam 3 cards por linha, deixamos dois por linha. */
+.cabecalho_card{
+    margin-bottom: 20px;
+}
+.cabecalho_card > p{
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 16px;
+    color: #b6b6b6;
+}
+.cabecalho_card > i{
+    font-size: 25px;
+    color: #ea2181;
+}
+.conteudo_card > h4, .card_destaque > h4{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #ea2181;
+    margin-bottom: 5px;
+}
+.conteudo_card > p, #textos-final > p{
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 18px;
+    line-height: 26px;
+    color: #b6b6b6;
+}
+/* Artigos em destaque "aside" */
+#artigos-destaque{
+    width: 33%;
+}
+#cards-destaque{
+    margin-top: 20px;
+}
+.card_destaque{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 32px;
+}
+#secao-artigos > div{
+    align-items: flex-start;
+}
+/* o cursor pointer é p/ fingir que o lugar é clicavel, quando vc passa o mouse por cima. MAS ELE NÃO É CLICAVEL! É SÓ UM "CHARME". */
+/* o font-weight é o tamanho da fonte (600 black, 700 italic, etc...) */
+/* o f004 é o codigo do coração que vai ficar depis da interação do mouse. Você pega ele clicando no icone la no font awesome, no canto superior direito */
+/* Hover do coração, para quando passar o mouse ficar preenchido */
+.cabecalho_card > i:hover::before{
+    font-family: "Font Awesome 6 Free";
+    content: "\f004";
+    font-weight: 600;
+    cursor: pointer;
+}
+/* começo estilo da ultima seção e do footer */
+/* Seção final */
+#secao-final{
+    background-color: #eceff0;
+    padding: 64px 0;
+}
+#textos-final{
+    width: 40%;
+}
+#textos-final > h2{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+    color: #313131;
+    margin-bottom: 20px;
+}
+#imagem-2{
+    max-width: 552px;
+    width: 40%;
+    min-width: 400px;
+}
+.btn_secundario{
+    background-color: #ea2181;
+    color: #fff;
+    margin: 32px auto 0;
+}
+/* fim do estilo da ultima seção */
+/* começo do estilo do rodapé */
+footer{
+    text-align: center;
+    padding: 10px;
+    font-family: 'Lexend Deca', sans-serif;
+    color: #ea2181;
+    background-color: #fff;
+}
+/* começando a responsividade */
+/* 1° Breakpoint - width: 1100px (h1, botão, cartões e na div textos da seção final) */
+/* screen é pq estamos falando de uma tela */
+@media screen and (max-width: 1100px){
+    #conteudo-esq > h1{
+        font-size: 48px;
+    }
+    .btn{
+        font-size: 18px;
+    }
+    .card{
+        width: 100%;
+    }
+    #textos-final{
+        width: 45%;
+    }
+}
+/* 2° Breakpoint - width 930px */
+@media screen and (max-width: 930px){
+    #conteudo-esq > h1{
+        font-size: 40px;
+    }
+    .btn, .btn_menu, #artigos-principais > p, .conteudo_card > p, #textos-final > p{
+        font-size: 16px;
+    }
+    #secao-artigos > h2, #textos-final > h2{
+        font-size: 25px;
+    }
+    #artigos-principais > h3, #artigos-destaque > h3{
+        font-size: 20px;
+    }
+    .conteudo_card > h4, .card_destaque > h4{
+        font-size: 18px;
+    }
+}
+/* 3° Breakpoint - width 930px */
+@media screen and (max-width: 830px){
+    /* alterar o banner */
+    /* display none esconde a imagem ou elemento */
+    #imagem-1{
+        display: none;
+    }
+    #conteudo-esq{
+        width: 70%;
+        text-align: center;
+    }
+    #conteudo-inicial > div{
+        justify-content: center;
+    }
+    #conteudo-esq > .btn{
+        margin: 0 auto;
+    }
+    #conteudo-esq > h1{
+        font-size: 56px;
+    }
+    /* artigos */
+    /* subimos os cards em destaque para cima dos outros cards que eram os principais. */
+    #secao-artigos > div{
+        flex-direction: column-reverse;
+    }
+    #artigos-destaque{
+        width: 100%;
+        margin-bottom: 32px;
+    }
+    #cards-destaque{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .card_destaque{
+        width: 48%;
+        min-width: 260px;
+    }
+    #artigos-principais{
+        width: 100%;
+    }    
+    .card{
+        min-width: 100%;
+    }
+    /* seção final */
+    #conteudo-final{
+        flex-direction: column;
+    }
+    #textos-final{
+        text-align: center;
+        width: 80%;
+        margin-bottom: 32px;
+    }
+    #imagem-2{
+        width: 60%;
+        min-width: 200px;
+    }
+}
+/* 4° Breakpoint - width 600 */
+/* display none é para esconder o elemento selecionado */
+@media screen and (max-width: 600px){
+    #links-secoes{
+        display: none;
+    }
+    #conteudo-esq > p{
+        display: none;
+    }
+    #conteudo-esq > h1{
+        font-size: 38px;
+        margin-bottom: 32px;
+    }
+    #conteudo-esq{
+        width: 100%;
+    }
+    .card_destaque{
+        width: 100%;
+    }
+}
